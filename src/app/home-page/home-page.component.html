@@ -1,0 +1,18 @@
+<div class="div-principal"> 
+  <div class="form-container">
+    <form [formGroup]="form">
+      <mat-form-field class="form" appearance="outline">
+        <mat-label style="font-size: 20px;">Insira as URLs</mat-label>
+        <textarea placeholder="Siga os exemplos abaixo
+http://localhost:5500
+http://localhost:5500
+http://localhost:5500"
+formControlName="urls" matInput rows="25"></textarea>
+      </mat-form-field>
+    </form>
+    <div class="buttons">
+      <button mat-raised-button [disabled]="!form.valid" (click)="enviarUrls(form)" class="button" color="primary">Enviar</button>
+      <button mat-raised-button (click)="visualizarDados()" class="button" color="primary">Visualizar Dados</button>
+    </div>
+  </div>
+</div>
